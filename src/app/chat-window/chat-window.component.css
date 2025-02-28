@@ -1,0 +1,82 @@
+.chat-container {
+  width: 700px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+  background-color: rgb(162, 123, 92);
+  overflow: hidden;
+  position: relative;
+}
+
+.message-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  padding-bottom: 60px;
+}
+
+.message-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.message-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.message-item {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 5px 0;
+  word-wrap: break-word;
+  position: relative;
+  font-size: 16px;
+  opacity: 0; /* Start with opacity 0 for the fade-in effect */
+  animation: fadeIn 0.5s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Animation for smooth fade-in */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start from a slight downward position */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End at the normal position */
+  }
+}
+
+.username {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: block;
+}
+
+.received {
+  background-color: rgb(63, 79, 68);
+  color: rgb(220, 215, 201);
+  align-self: flex-start;
+}
+
+.sent {
+  background-color: rgb(63, 79, 68);
+  color: rgb(220, 215, 201);
+  align-self: flex-end;
+}
+
+.chat-container .message-list {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 60px;
+}

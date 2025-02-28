@@ -1,0 +1,19 @@
+<div class="chat-container">
+  <h2 style="text-align: center;">Chat Window</h2>
+  <ul class="message-list" #messageList>
+    <li
+      *ngFor="let msg of storeMessages;"
+      [ngClass]="{'sent': msg.username === username, 'received': msg.username !== username}"
+      class="message-item"
+    >
+      <span class="username">{{ msg.username }}</span>
+      <hr>
+      <ng-container *ngIf="msg.message.trim().endsWith('.gif')">
+        <span><img [src]="msg.message" alt="gif" width="200px" height="200px"></span>
+      </ng-container>
+      <ng-container *ngIf="!msg.message.trim().endsWith('.gif')">
+        <span>{{ msg.message }}</span>
+      </ng-container>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="main">
+<div>
+  <app-chat-window [messageData]="message" [username]="username"/>
+
+</div>
+<app-gif></app-gif>
+</div>
+<div>
+  <app-sendmessage (messageData)="HandleSendMessage($event)"/>
+</div>
+

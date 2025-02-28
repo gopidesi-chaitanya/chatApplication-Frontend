@@ -1,0 +1,94 @@
+.gifSection {
+  height: 80vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow-y: auto;
+  background-color: #A27B5C;
+  border-radius: 20px;
+  padding: 10px;
+  width: 450px;
+  flex-wrap: wrap;
+
+}
+
+.gif {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+    
+
+.gifimg {
+  width: 180px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+}
+
+.gifSection::-webkit-scrollbar {
+  width: 5px;
+}
+
+.gifSection::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+/* Search Section container */
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0; /* Light background for the search area */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field styling */
+.searchSection input {
+  width: 300px;
+
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.searchSection input:focus {
+  border-color: #5d8df4;
+  box-shadow: 0 0 8px rgba(93, 141, 244, 0.4);
+}
+
+/* Button styling */
+.searchSection button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #5d8df4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.searchSection button:hover {
+  background-color: #4a7ad1;
+  transform: translateY(-2px);
+}
+
+/* Button active effect */
+.searchSection button:active {
+  background-color: #3c6cb0;
+  transform: translateY(2px);
+}
+
+/* Accessibility improvement - make input and button the same height */
+.searchSection input, .searchSection button {
+  height: 50px; /* Make both input and button have the same height */
+}

@@ -1,0 +1,23 @@
+
+<!-- @for(GIFCategorie of GIFCategories; track GIFCategorie){
+    <h1>{{GIFCategorie.searchterm}}</h1>
+} -->
+
+
+<div class="gifSection">
+  <div class="searchSection">
+    <input type="text" [(ngModel)]="term" placeholder="search for gif">
+    <button (click)="GetGifs()" class="button">GET GIF</button>
+  </div>
+
+  <div class="gif">
+    @for(gifUrl of gifUrls;track gifUrl){
+      <div >
+        <img [src]="gifUrl.media_formats.gif.url" alt="" width="250px" height="250px" class="gifimg" (dblclick)="SetGifUrl(gifUrl.media_formats.gif.url)" />
+      </div>
+      }
+  </div>
+
+</div>
+
+
